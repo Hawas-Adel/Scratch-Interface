@@ -15,7 +15,7 @@ public static class TweenUtilities
 	{
 		for (float i = 0f; i < duration; i += Time.deltaTime)
 		{
-			updateAction.Invoke(i);
+			updateAction.Invoke(i / duration);
 			yield return null;
 		}
 
