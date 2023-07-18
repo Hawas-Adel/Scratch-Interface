@@ -163,11 +163,23 @@ public abstract class ScratchNode : MonoBehaviour, IBeginDragHandler, IDragHandl
 		if (!ScratchManager.Instance.CanvasContainsPoint(eventData.position))
 		{
 			Destroy(draggedNode.gameObject);
+			DestroyNextNode(draggedNode);
 			return;
 		}
 
 		draggedNode.DropInCanvas();
 		draggedNode = null;
+	}
+
+	private void DestroyNextNode(ScratchNode node)
+	{
+		if (!node.nextNode)
+		{
+			return;
+		}
+
+		Destroy(node.nextNode.gameObject);
+		DestroyNextNode(node.nextNode);
 	}
 	#endregion
 }

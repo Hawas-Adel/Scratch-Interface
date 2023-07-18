@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class ScratchManager : SingletonMonoBehavior<ScratchManager>
 {
-	[SerializeField] private GameObject Target;
+	[field: SerializeField] public GameObject Target { get; private set; }
 
 	[field: SerializeField, Space] public RectTransform ScratchCanvas { get; private set; }
 
