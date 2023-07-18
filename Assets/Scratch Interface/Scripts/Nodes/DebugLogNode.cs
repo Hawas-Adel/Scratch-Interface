@@ -5,5 +5,5 @@ public class DebugLogNode : ScratchNode
 {
 	[SerializeField] private TMP_InputField Input;
 
-	public override void OnStartNodeBehaviourExecution() => Debug.Log(Input.text);
+	protected override void OnStartNodeBehaviourExecution() => Debug.Log(Input.text);
 }

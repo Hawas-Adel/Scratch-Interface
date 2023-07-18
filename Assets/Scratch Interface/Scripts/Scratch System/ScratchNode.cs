@@ -122,7 +122,7 @@ public abstract class ScratchNode : MonoBehaviour, IBeginDragHandler, IDragHandl
 		nextNode.ExecuteNodeBehaviour();
 	}
 
-	public abstract void OnStartNodeBehaviourExecution();
+	protected abstract void OnStartNodeBehaviourExecution();
 	#endregion
 
 	#region Drag / Drop
