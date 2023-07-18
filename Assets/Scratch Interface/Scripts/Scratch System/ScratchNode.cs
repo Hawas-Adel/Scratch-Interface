@@ -5,7 +5,6 @@ using UnityEngine.EventSystems;
 public abstract class ScratchNode : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
 	#region Node Is In Canvas Handling
-
 	private static List<ScratchNode> nodesInCanvas = new();
 	public bool IsInCanvas => nodesInCanvas.Contains(this);
 
@@ -127,7 +126,6 @@ public abstract class ScratchNode : MonoBehaviour, IBeginDragHandler, IDragHandl
 	#endregion
 
 	#region Drag / Drop
-
 	private ScratchNode draggedNode = null;
 	void IBeginDragHandler.OnBeginDrag(PointerEventData eventData)
 	{
